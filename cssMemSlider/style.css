@@ -79,3 +79,32 @@ display: flex;
 #r4:checked ~ .s1{
     margin-left: -75%;
 }
+
+@media(max-width: 512px){
+    .slider{
+        width: 400px;
+        height: 350px;
+       margin: 40px auto;
+       overflow: hidden;
+       border-radius: 10px;
+       background-color: azure;
+       -webkit-box-shadow: 0 15px 50px black;
+            box-shadow: 0 15px 50px black;
+            display: flex;
+            flex-direction: column;
+    }
+    .slides{
+        display: flex;
+        border-radius: 15px;
+        width: 400%;
+        height: 70%;
+    }
+    .text{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .bottom{
+        margin-top: 0px;
+        justify-content: center;
+    }
+}
