@@ -79,7 +79,6 @@ display: flex;
 #r4:checked ~ .s1{
     margin-left: -75%;
 }
-
 @media(max-width: 512px){
     .slider{
         width: 400px;
