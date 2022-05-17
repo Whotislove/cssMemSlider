@@ -17,8 +17,7 @@ body{
         box-shadow: 0 15px 50px black;
         display: flex;
         flex-direction: column;
-}
-.slides input{
+} input{
     display: none;
 }
 .slides{
@@ -44,11 +43,19 @@ body{
     width: 100%;
 }
 .text{
-    margin-top: 10px;
+    width: 100%;
+    height: 120px;
     text-align: center;
     font-style: italic;
     font-weight:bold;
     font-size: 30px;
+    transition: all 0.7s ease;
+}
+.tex{
+    height: 480px;
+   display: flex;
+   flex-direction: column;
+    overflow: hidden;
 }
 .navigation{
 display: flex;
@@ -67,19 +74,39 @@ display: flex;
     transform: scale(1.2 );
     opacity: 1;
 }
-#r1:checked ~ .s1{
+#r1:checked ~ .slides  .s1{
     margin-left: 0;
 }
-#r2:checked ~ .s1{
+#r2:checked ~ .slides  .s1{
     margin-left: -25%;
 }
-#r3:checked ~ .s1{
+#r3:checked ~ .slides .s1{
     margin-left: -50%;
 }
-#r4:checked ~ .s1{
+#r4:checked ~ .slides .s1{
     margin-left: -75%;
 }
+#r1:checked ~ .bottom .tex .t1{
+    margin-top: 0;
+}
+#r2:checked ~ .bottom .tex .t1{
+    margin-top: -12%;
+}
+#r3:checked ~ .bottom .tex .t1{
+    margin-top: -24%;
+}
+#r4:checked ~ .bottom .tex .t1{
+    margin-top: -36%;
+}
 @media(max-width: 512px){
+    .bottom{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .navigation{
+        display: flex;
+        justify-content: center;
+    }
     .slider{
         width: 400px;
         height: 350px;
@@ -102,8 +129,23 @@ display: flex;
         margin-top: 50px;
         font-size: 20px;
     }
+    .tex{
+        height: 75px;
+    }
     .bottom{
         margin-top: 0px;
         justify-content: center;
+    }
+    #r1:checked ~ .bottom .tex .t1{
+        margin-top: 0;
+    }
+    #r2:checked ~ .bottom .tex .t1{
+        margin-top: -18%;
+    }
+    #r3:checked ~ .bottom .tex .t1{
+        margin-top: -40%;
+    }
+    #r4:checked ~ .bottom .tex .t1{
+        margin-top: -80%;
     }
 }
