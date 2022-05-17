@@ -1,0 +1,166 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgb(12, 187, 91);
+}
+.slider{
+    width: 1100px;
+    height: 600px;
+   margin: 50px auto;
+   overflow: hidden;
+   border-radius: 10px;
+   background-color: azure;
+   -webkit-box-shadow: 0 15px 50px black;
+        box-shadow: 0 15px 50px black;
+        display: flex;
+        flex-direction: column;
+} input{
+    display: none;
+}
+.slides{
+    display: flex;
+    border-radius: 15px;
+    width: 400%;
+    height: 80%;
+}
+.slide{ 
+    width: 25%;
+    transition: all 0.7s ease;
+    padding: 20px;
+}
+.slide img{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+.bottom{
+    margin-top: 30px;
+    display: flex;
+    justify-content:flex-end;
+    width: 100%;
+}
+.text{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    font-style: italic;
+    font-weight:bold;
+    font-size: 30px;
+    transition: all 0.7s ease;
+}
+.tex{
+    height: 480px;
+   display: flex;
+   flex-direction: column;
+    overflow: hidden;
+}
+.navigation{
+display: flex;
+}
+.nav{
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: red;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+.active{
+    text-align: center;
+    height: 100%;
+}
+.nav:hover{
+    background-color: black;
+    transform: scale(1.2 );
+}
+#r1:checked ~ .slides  .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .slides  .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .slides .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .slides .s1{
+    margin-left: -75%;
+}
+
+#r1:checked ~.bottom .navigation .nav .n1,
+#r2:checked ~.bottom .navigation .nav .n2,
+#r3:checked ~.bottom .navigation .nav .n3,
+#r4:checked ~.bottom .navigation .nav .n4{
+    background-color: black;
+    border: 0.2em solid red;
+    border-radius: 100%;
+    transform: scale(1.2);
+    transition: all 0.7s ease;
+}
+
+#r1:checked ~ .bottom .tex .t1{
+    margin-top: 0;
+}
+#r2:checked ~ .bottom .tex .t1{
+    margin-top: -12%;
+}
+#r3:checked ~ .bottom .tex .t1{
+    margin-top: -24%;
+}
+#r4:checked ~ .bottom .tex .t1{
+    margin-top: -36%;
+}
+@media(max-width: 512px){
+    .bottom{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .navigation{
+        display: flex;
+        justify-content: center;
+    }
+    .slider{
+        width: 400px;
+        height: 350px;
+       margin: 40px auto;
+       overflow: hidden;
+       border-radius: 10px;
+       background-color: azure;
+       -webkit-box-shadow: 0 15px 50px black;
+            box-shadow: 0 15px 50px black;
+            display: flex;
+            flex-direction: column;
+    }
+    .slides{
+        display: flex;
+        border-radius: 15px;
+        width: 400%;
+        height: 70%;
+    }
+    .text{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .tex{
+        height: 75px;
+    }
+    .bottom{
+        margin-top: 0px;
+        justify-content: center;
+    }
+    #r1:checked ~ .bottom .tex .t1{
+        margin-top: 0;
+    }
+    #r2:checked ~ .bottom .tex .t1{
+        margin-top: -18%;
+    }
+    #r3:checked ~ .bottom .tex .t1{
+        margin-top: -40%;
+    }
+    #r4:checked ~ .bottom .tex .t1{
+        margin-top: -80%;
+    }
+}
