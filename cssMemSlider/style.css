@@ -67,12 +67,15 @@ display: flex;
     background-color: red;
     margin: 5px;
     cursor: pointer;
-    opacity: 0.5;
     transition: all 0.7s ease;
 }
+.active{
+    text-align: center;
+    height: 100%;
+}
 .nav:hover{
+    background-color: black;
     transform: scale(1.2 );
-    opacity: 1;
 }
 #r1:checked ~ .slides  .s1{
     margin-left: 0;
@@ -86,6 +89,18 @@ display: flex;
 #r4:checked ~ .slides .s1{
     margin-left: -75%;
 }
+
+#r1:checked ~.bottom .navigation .nav .n1,
+#r2:checked ~.bottom .navigation .nav .n2,
+#r3:checked ~.bottom .navigation .nav .n3,
+#r4:checked ~.bottom .navigation .nav .n4{
+    background-color: black;
+    border: 0.2em solid red;
+    border-radius: 100%;
+    transform: scale(1.2);
+    transition: all 0.7s ease;
+}
+
 #r1:checked ~ .bottom .tex .t1{
     margin-top: 0;
 }
